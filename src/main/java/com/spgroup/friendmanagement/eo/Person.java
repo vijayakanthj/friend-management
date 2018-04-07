@@ -26,10 +26,6 @@ public class Person implements Serializable {
     
     
 
-	public Person(String email) {
-		super();
-		this.email = email;
-	}
 
 	public Long getId() {
 		return id;

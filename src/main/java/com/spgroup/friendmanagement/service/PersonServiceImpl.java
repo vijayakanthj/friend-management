@@ -23,7 +23,9 @@ public class PersonServiceImpl implements PersonService {
         if (personDao.existsByEmail(email)) {
             throw new Exception("Email Already Registered");
         }
-        return personDao.save(new Person(email));
+        Person p=new Person();
+        p.setEmail(email);
+        return personDao.save(p);
     }
 
     @Override
